@@ -68,6 +68,9 @@ body
         width: 31%
         height: 400px
         margin-bottom: 4%
+        @include mixin.flex-center
+        flex-direction: column
+        color: variables.$primary-color 
 
         &-tittle
             font-size: 2rem
@@ -81,3 +84,37 @@ body
             font-weight: 500
             text-transform: uppercase
             letter-spacing: 1px
+
+            &:hover
+                background-color: variables.$primary-color
+                color: variables.$bg-color
+                border: 2px solid variables.$bg-color
+
+    #card1
+        @include mixin.bg-img('king.jpg')
+
+    #card2
+        @include mixin.bg-img('city.jpg')
+
+    #card3
+        @include mixin.bg-img('bebop.jpg')
+    
+    #card4
+        @include mixin.bg-img('itachi.jpg')
+    
+    #card5
+        @include mixin.bg-img('starry.jpg')
+
+    #card6
+        @include mixin.bg-img('aot.jpg')
+    
+    #card7
+        @include mixin.bg-img('galaxy.jpg')
+
+    #card8
+        @include mixin.bg-img('monsters.png')
+
+    #card9
+        @include mixin.bg-img('bully.jpg')
+
+    
