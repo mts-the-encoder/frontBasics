@@ -24,15 +24,20 @@ body
     justify-content: space-between
     @include mixin.container
 
-    &-brand 
+    @include mixin.mobile
+        padding: 1.1rem
+
+    &-brand
         color: variables.$primary-color
         font-size: 4rem
-    
+
     &-navbar
         ul
             height: 100%
             @include mixin.flex-center
-            
+
+            @include mixin.mobile
+                display: none
         li
             margin: 0 1rem
             text-transform: uppercase
@@ -40,7 +45,7 @@ body
 
             .active
                 color: variables.$secundary-color
-            
+
             a
                 &:hover
                     color: variables.$secundary-color
@@ -49,6 +54,9 @@ body
         ul
             @include mixin.flex-center
             height: 100%
+
+            @include mixin.mobile
+                display: none
 
             li
                 margin: 0 1rem
@@ -64,13 +72,20 @@ body
     justify-content: space-between
     padding: 0
 
+    @include mixin.mobile
+        flex-direction: column
+
     &-card
         width: 31%
         height: 400px
         margin-bottom: 4%
         @include mixin.flex-center
         flex-direction: column
-        color: variables.$primary-color 
+        color: variables.$primary-color
+
+        @include mixin.mobile
+            width: 90%
+            margin-bottom: 6%
 
         &-tittle
             font-size: 2rem
@@ -98,16 +113,16 @@ body
 
     #card3
         @include mixin.bg-img('bebop.jpg')
-    
+
     #card4
         @include mixin.bg-img('itachi.jpg')
-    
+
     #card5
         @include mixin.bg-img('starry.jpg')
 
     #card6
         @include mixin.bg-img('aot.jpg')
-    
+
     #card7
         @include mixin.bg-img('galaxy.jpg')
 
@@ -118,11 +133,9 @@ body
         @include mixin.bg-img('bully.jpg')
 
 footer
-    text-align:  center
+    text-align: center
     padding-bottom: 2rem
 
     span
         font-weight: bold
         color: variables.$secundary-color
-
-
