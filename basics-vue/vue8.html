@@ -1,0 +1,31 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <!--É removido do DOM-->
+    <p v-if="mostrar">Olá, vc está vendo!</p>
+    <p v-else>Eu estou vísivel?</p>
+
+    <!---Não é removido do DOM-->
+    <p v-show="mostrar">Ainda estou por aqui</p>
+
+    <button @click="mostrar = !mostrar">Mostrar / Esconder</button><br><br>
+
+    <ul>
+        <li v-for="pais in paises">{{ pais.nome }} - {{ pais.gdp }}</li>
+    </ul>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            mostrar: true,
+            paises: [
+                { nome: 'Venezuela', gdp: 1 },
+                { nome: 'Brasil', gdp: 20 },
+                { nome: 'Japão', gdp: 30 },
+                { nome: 'E.U.A', gdp: 40 }
+            ]
+        },
+    })
+</script>

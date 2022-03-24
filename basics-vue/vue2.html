@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <span v-html="title"></span>
+    <button @click="b1">Button One</button>
+    <button @click="b2">Button Two</button>
+    <button @click="b3">Button Three</button>
+</div>
+
+<script>
+    new Vue ({
+        el: '#app',
+        data: {
+            title: '<h1>New title</h1>'
+        },
+        methods: {
+            b1: function() {
+                this.title = '<h3>New title 1</h3>';
+            },
+            b2: function() {
+                this.title = '<h3>New new title 2</h3>';
+            },
+            b3: function() {
+                this.title = '<h3>New new new title 3</h3>'
+            }
+        },
+    })
+</script>
