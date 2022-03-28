@@ -1,7 +1,7 @@
 <template>
   <div class="item" id="span-example">
     <i class="fa-solid fa-layer-group"></i>
-    <span v-if="showDash">Example</span>
+    <span v-if="!showDash">Example</span>
     <button @click="showDash = ! showDash">
       <i id="teste" class="fa-solid fa-arrow-left"></i>
     </button>
@@ -12,7 +12,7 @@
   </div>
   <div class="item">
     <i class="fa-solid fa-box-open"></i>
-    <span>Menu Layout</span>
+    <span class="big-text">Menu Layout</span>
     <i class="fa-solid fa-arrow-down"></i>
   </div>
   <div class="item">
@@ -76,7 +76,15 @@ export default {
     padding-top: 2px;
     vertical-align: middle;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    align-items: center;
+  }
+  // .big-text {
+  //   margin-left: ;
+  // }
+  span {
+    text-align-last: center;
+    margin: 0 auto;
   }
   #dash {
     background-color: #EBF1FC;
@@ -95,6 +103,7 @@ export default {
   .span-main {
     color: #000;
     background-color: #EBF1FC;
+    margin-right: 150px;
   }
   #span-example {
     padding-bottom: 30px;
@@ -110,5 +119,8 @@ export default {
   #principal  {
     color: #000;
     background-color: #EBF1FC;
+  }
+  .big-text {
+    justify-self: center;
   }
 </style>
