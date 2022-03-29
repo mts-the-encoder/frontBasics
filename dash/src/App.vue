@@ -1,6 +1,8 @@
 <template>
-  <Navbar />
-  <Dashboard />
+  <div class="principal-div">
+    <Navbar />
+    <Dashboard />
+  </div>
 </template>
 
 <script>
@@ -25,5 +27,12 @@ export default {
   font-weight: 700;
   color: #fff;
   font-size: 20px;
+  overflow-x: hidden;
+  overflow-y: hidden
 }
+  .principal-div {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
 </style>

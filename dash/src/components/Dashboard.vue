@@ -1,9 +1,5 @@
 <template>
-  <div class="main">
-    <!-- <div>
-      <p>Application | <b>Dashboard</b></p>
-      <p>General Report</p>
-    </div> -->
+  <div  class="main">
     <Boxes />
   </div>
 </template>
@@ -15,16 +11,23 @@ export default {
   components: {
     Boxes,
   },
+  data() {
+    return {
+      showDash: true,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .main {
   width: 70%;
-  height: 85vh;
-  margin-left: 25%;
+  height: 88vh;
   background: #ebf1fc;
   border-radius: 20px;
+  margin-top: 20px;
+  margin-right: 30px;
   display: flex;
+  justify-content: space-around;
 }
 </style>
