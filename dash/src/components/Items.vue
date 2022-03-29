@@ -1,5 +1,5 @@
 <template>
-  <div class="item" id="span-example">
+   <div class="item" id="span-example">
     <i class="fa-solid fa-layer-group"></i>
     <span v-show="showDash">Example</span>
     <i
@@ -55,7 +55,7 @@
     <i class="fa-solid fa-paste"></i>
     <span v-show="showDash">Pages</span>
     <i class="fa-solid fa-arrow-down"></i>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -64,7 +64,6 @@ export default {
   data() {
     return {
       showDash: true,
-      arrow: "",
     };
   },
 };
