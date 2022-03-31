@@ -24,9 +24,8 @@ export default {
   padding: 0;
   background-color: #1d3faa;
   font-family: "Nunito Sans", sans-serif;
-  font-weight: 700;
   color: #fff;
-  font-size: 20px;
+  font-size: 40px;
   overflow-x: hidden;
   overflow-y: hidden
 }

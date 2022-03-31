@@ -5,9 +5,10 @@
 </template>
 
 <script>
-import Boxes from "./Boxes.vue";
+
+import Boxes from './Boxes.vue';
+
 export default {
-  name: "Dashboard",
   components: {
     Boxes,
   },
@@ -22,11 +23,10 @@ export default {
 <style lang="scss" scoped>
 .main {
   width: 70%;
-  height: 88vh;
+  height: 90vh;
   background: #ebf1fc;
   border-radius: 20px;
-  margin-top: 20px;
-  margin-right: 30px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-around;
 }
