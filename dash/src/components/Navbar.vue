@@ -2,15 +2,17 @@
   <div class="navbar" :class="{ expanded: isExpanded }">
     <nav class="nav">
       <div class="brand">
-        <i class="brand-icon icon-left fa-solid fa-layer-group"></i>
+        <i class="brand-icon icon-left fa-solid fa-layer-group"/>
         <span class="brand-text">Example</span>
-        <i
+        <a
+          href="#"
+          aria-label="expand menu"
           class="brand-toggle icon-right fa-solid fa-arrow-left-long"
-          @click="isExpanded = !isExpanded"
-        ></i>
+          @click="expandMenu($event)"
+        />
       </div>
       <ul class="categories">
-        <NavbarItem
+        <navbar-item
           v-for="category in categories"
           :key="category.id"
           :label="category.label"
@@ -24,8 +26,8 @@
 </template>
 
 <script>
-import NavbarItem from "./NavbarItem";
-import categories from "../data/menu-categories";
+import NavbarItem from './NavbarItem.vue';
+import categories from '../data/menu-categories';
 
 export default {
   components: {
@@ -38,20 +40,32 @@ export default {
       isActive: true,
     };
   },
+  methods: {
+    expandMenu(e) {
+      e.preventDefault();
+      this.isExpanded = !this.isExpanded;
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 .navbar {
   width: 100%;
   max-width: 120px;
   transition: max-width 0.5s;
+  font-family: "Nunito Sans", sans-serif;
 
   .nav {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+
+  }
+  .brand-toggle {
+    color: #FFF;
   }
   .categories {
     width: 100%;
@@ -62,10 +76,15 @@ export default {
         max-width: 0;
         opacity: 0;
         transition: all 0.5s linear;
-        &.isActive {
-          background-color: #ebf1fc;
-        }
       }
+    }
+    .active {
+      color: #000;
+      background-color: #ebf1fc;
+      border-radius: 12px;
+      height: 70px;
+      width: 400px;
+      padding: 5px;
     }
   }
 
@@ -86,6 +105,7 @@ export default {
     .brand-toggle {
       transform: rotate(180deg);
       transition: transform 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      text-decoration: none;
     }
   }
   &.expanded {

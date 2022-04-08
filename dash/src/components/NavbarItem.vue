@@ -38,7 +38,7 @@ export default {
     justify-content: flex-start;
     margin-top: 38px;
     align-items: center;
-    &.isActive {
+    &.active {
       background-color: #ebf1fc;
     }
 
