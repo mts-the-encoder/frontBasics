@@ -41,10 +41,12 @@ export default {
     &.active {
       background-color: #ebf1fc;
     }
-
     .category-label {
       font-size: 20px;
       width: 100%;
     }
+    @media only screen and (max-width: 450px) {
+        font-size: 15px;
+      }
   }
 </style>

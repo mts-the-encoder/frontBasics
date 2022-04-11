@@ -30,6 +30,8 @@ body {
   font-size: 40px;
   overflow-x: hidden;
   overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
 }
   .principal-div {
     display: flex;

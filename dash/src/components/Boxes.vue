@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'Boxes',
+  name: 'Boxes'
 }
 </script>
 
@@ -41,12 +41,33 @@ export default {
   background-color: #FFF;
   flex-basis: calc(25% - 20px);
   margin-top: 120px;
-  box-shadow: .3px .3px .2px .2px #000;
+  box-shadow: .5px .5px .5px .5px #000;
 }
 .banner {
   width: 600px;
-  height: 500px;
+  height: 505px;
   background-color: #FFF;
-  box-shadow: .3px .3px .2px .2px #000;
+  box-shadow: .5px .5px .5px .5px #000;
+}
+@media only screen and (max-width: 450px) {
+    .container {
+      height: 100%;
+      width: 70%;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: flex-start;
+      &active {
+        width: 10vh;
+      }
+    }
+      .box {
+        height: 50px;
+        width: 100px;
+        background-color: #FFF;
+      }
+      .banner {
+        display: none;
+      }
 }
 </style>

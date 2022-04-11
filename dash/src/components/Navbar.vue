@@ -1,6 +1,15 @@
 <template>
   <div class="navbar" :class="{ expanded: isExpanded }">
-    <nav class="nav">
+    <div class="breadcrumb">
+      <a
+        href="#"
+        aria-label="show menu"
+        class="brand-toggle icon-right fa-solid fa-bars"
+        @click="showMenu"
+      />
+      <span>Application | <b>Dashboard</b></span>
+    </div>
+    <nav class="nav" :class="{ visible: isVisible }">
       <div class="brand">
         <i class="brand-icon icon-left fa-solid fa-layer-group"/>
         <span class="brand-text">Example</span>
@@ -38,12 +47,16 @@ export default {
       categories,
       isExpanded: false,
       isActive: true,
+      isVisible: false,
     };
   },
   methods: {
     expandMenu(e) {
       e.preventDefault();
       this.isExpanded = !this.isExpanded;
+    },
+    showMenu() {
+      this.isVisible = !this.isVisible;
     },
   },
 };
@@ -56,16 +69,28 @@ export default {
   width: 100%;
   max-width: 120px;
   transition: max-width 0.5s;
-  font-family: "Nunito Sans", sans-serif;
+
+  .breadcrumb {
+    max-width: none;
+  }
+  @media only screen and (max-width: 450px) {
+        font-size: 15px;
+        max-width: none;
+        justify-content: space-evenly;
+      }
 
   .nav {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    &visible {
+      translate: rotate(-100deg);
+    }
 
   }
   .brand-toggle {
     color: #FFF;
+
   }
   .categories {
     width: 100%;
@@ -83,14 +108,14 @@ export default {
       background-color: #ebf1fc;
       border-radius: 12px;
       height: 70px;
-      width: 400px;
+      width: 450px;
       padding: 5px;
     }
   }
 
   .brand {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-size: 20px;
     margin-top: 25px;
     align-items: center;
@@ -101,6 +126,9 @@ export default {
       opacity: 0;
       transition: all 0.5s linear;
       width: 100%;
+      @media only screen and (max-width: 450px) {
+        font-size: 15px;
+      }
     }
     .brand-toggle {
       transform: rotate(180deg);
