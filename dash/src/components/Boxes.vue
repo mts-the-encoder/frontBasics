@@ -5,7 +5,6 @@
     <div class="box"></div>
     <div class="box"></div>
     <div class="banner"></div>
-    <div class="banner"></div>
   </div>
 </template>
 
@@ -24,9 +23,10 @@ export default {
 .container {
   background-color: #ebf1fc;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
+  padding: 5px;
 }
 .box {
   width: 20px;
@@ -35,12 +35,11 @@ export default {
   flex-basis: calc(25% - 20px);
   margin-top: 120px;
   box-shadow: 0.5px 0.5px 0.5px 0.5px #000;
-  padding-bottom: 10px;
 }
 .banner {
   width: 600px;
   height: 500px;
-  padding-top: 10px;
+  flex-basis: calc(103% - 20px);
   background-color: #fff;
   box-shadow: 0.5px 0.5px 0.5px 0.5px #000;
 }
