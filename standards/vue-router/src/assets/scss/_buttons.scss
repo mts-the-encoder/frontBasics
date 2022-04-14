@@ -1,0 +1,14 @@
+@import './colors';
+
+@mixin button-submit {
+    color: $mts-color-placeholder;
+    background-color: $mts-color--empty;
+    border-radius: 10px;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+

@@ -1,0 +1,10 @@
+@import '@/assets/scss/_colors.scss'; 
+@import '@/assets/scss/_buttons.scss'; 
+
+h1:first-child {
+    color: $mts-color--sucess;
+}
+
+button {
+    @include button-submit;
+}
