@@ -45,8 +45,7 @@ export default {
       font-size: 20px;
       width: 100%;
     }
-    @media only screen and (max-width: 450px) {
-        font-size: 15px;
-      }
+  }
+  @media only screen and (min-width: 1024px) {
   }
 </style>

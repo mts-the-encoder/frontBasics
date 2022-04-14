@@ -18,24 +18,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
+<style lang="scss" scoped>
+.principal-div {
+    padding: 20px;
+    @media only screen and (min-width: 1024px) {
+      display: flex;
+      justify-content: space-evenly;
+    }
 }
-body {
-  background-color: #1d3faa;
-  font-family: "Nunito Sans", sans-serif;
-  color: #fff;
-  font-size: 40px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 100vh;
-  width: 100vw;
-}
-  .principal-div {
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-evenly;
-  }
 </style>
