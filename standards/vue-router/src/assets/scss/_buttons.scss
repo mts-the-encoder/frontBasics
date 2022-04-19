@@ -1,14 +1,61 @@
 @import './colors';
 
-@mixin button-submit {
-    color: $mts-color-placeholder;
-    background-color: $mts-color--empty;
+@mixin outline {
+    color: $mts-color--tertiary;
+    background-color: $mts-color--sucess;
+    border: 3px solid $mts-color--sucess;
     border-radius: 10px;
     height: 100px;
     width: 500px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    font-size: 20px;
+    justify-content: center;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
 }
 
+@mixin void {
+    color: $mts-color--sucess;
+    background-color: $mts-color--tertiary;
+    border: 3px solid $mts-color--sucess;
+    border-radius: 10px;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@mixin medium {
+    color: $mts-color--tertiary;
+    background-color: $mts-color--sucess;
+    border: 3px solid $mts-color--sucess;
+    border-radius: 10px;
+    height: 75px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@mixin small {
+    color: $mts-color--tertiary;
+    background-color: $mts-color--sucess;
+    border: 3px solid $mts-color--sucess;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
+}

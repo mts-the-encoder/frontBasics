@@ -1,0 +1,78 @@
+@import './colors';
+
+@mixin empty {
+    color: $mts-color--placeholder;
+    background-color: $mts-color--empty;
+    border: 5px solid $mts-color--empty;
+    border-radius: 10px;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    padding: 10px;
+}
+:empty:active {
+    color: red;
+}
+
+:empty:focus{
+    color: $mts-color--failed;
+}
+
+@mixin filled {
+    color: $mts-color--placeholder;
+    background-color: $mts-color--tertiary;
+    border: 3px solid $mts-color--secondary;
+    border-radius: 10px;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    padding: 10px;
+}
+
+@mixin sucess {
+    color: $mts-color--placeholder;
+    background-color: $mts-color--tertiary;
+    border: 3px solid $mts-color--sucess;
+    border-radius: 10px;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    padding: 10px;
+}
+
+@mixin warning {
+    color: $mts-color--placeholder;
+    background-color: $mts-color--tertiary;
+    border: 3px solid $mts-color--warning;
+    border-radius: 10px;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    padding: 10px;
+}
+
+@mixin failed {
+    color: $mts-color--placeholder;
+    background-color: $mts-color--tertiary;
+    border: 3px solid $mts-color--failed;
+    border-radius: 10px;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    padding: 10px;
+}
