@@ -199,7 +199,7 @@ body {
 	border-bottom: 57px solid #1A1A1A;  
 	animation: tomoe_four 7s linear infinite alternate;
 }
- 
+
 @keyframes sharingan_after {
 	0% {
 		top: 20%;
